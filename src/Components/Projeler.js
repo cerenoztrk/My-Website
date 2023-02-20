@@ -13,7 +13,7 @@ const Projeler = () => {
       const response = await axios.get(
         "https://api.github.com/users/cerenoztrk/repos", {
         headers: {
-          Authorization: `Token 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`
+          Authorization: `Token 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`
         }
       }
       );
