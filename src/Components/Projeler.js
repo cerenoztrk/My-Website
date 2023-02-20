@@ -13,7 +13,7 @@ const Projeler = () => {
       const response = await axios.get(
         "https://api.github.com/users/cerenoztrk/repos", {
         headers: {
-          Authorization: `Token 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`
+          Authorization: `Token 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`
         }
       }
       );
@@ -31,7 +31,7 @@ const Projeler = () => {
   }
   return (
     <div className="repos-container" id="projeler">
-      <h1>Projects</h1>
+      <h1>PROJELER</h1>
       <ul className="repos">
         {repos.map((repo, idx)=>(
             <li className='repo-cards'><ProjeKart repo={repo} key={idx}/></li>))}
@@ -40,4 +40,4 @@ const Projeler = () => {
   );
 };
 
-export default Projeler
+export default Projeler;

@@ -3,7 +3,7 @@ import Developer from "../img/28242367.jpg";
 
 const Hakkımda = () => {
   return (
-    <div className="about-container" id="hakkımda">
+    <div className="about-container" id="hakkimda">
       <div className="developer-imag">
         <img src={Developer} alt="developer-girl" />
       </div>
