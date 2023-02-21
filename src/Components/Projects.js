@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import RepoCards  from "./RepoCards ";
 import Loading from "./Loading";
+//require ('dotenv').config();
 
 const Projects = () => {
   const [repos, setRepos] = useState([]);
