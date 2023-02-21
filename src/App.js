@@ -1,15 +1,15 @@
 import { Link } from "react-scroll";
-import Logo from "./img/2.jpg";
+import Logo from "./img/5.png";
 import './App.css';
 
-import { AiOutlineInstagram, AiFillGithub, AiFillLinkedin} from "react-icons/ai";
 
 
-import Anasayfa from "./Components/Anasayfa";
-import Hakkimda from "./Components/Hakkimda";
-import Yetenekler from "./Components/Yetenekler";
-import Projeler from "./Components/Projeler";
-import Iletisim from "./Components/Iletisim";
+
+import Homepage from "./Components/Homepage";
+import MyAbout  from "./Components/MyAbout ";
+import Skills from "./Components/Skills";
+import Projects from "./Components/Projects";
+import Contact  from "./Components/Contact";
 // nerde css
 function App() {
   return (
@@ -21,21 +21,21 @@ function App() {
           </div> 
         <div className="nav-items">
           <div className="nav-links">
-            <Link to="anasayfa" spy={true} smooth={true} offset={0} duration={500}>ANASAYFA</Link>
-            <Link to="hakkimda" spy={true} smooth={true} offset={-200} duration={500}>HAKKIMDA</Link>
-            <Link to="yetenekler" spy={true} smooth={true} offset={-200} duration={500}>YETENEKLER</Link>
-            <Link to="projeler" spy={true} smooth={true} offset={-50} duration={500}>PROJELER</Link>
-            <Link to="iletisim" spy={true} smooth={true} offset={50} duration={500}>İLETİŞİM</Link>
+            <Link to="homepage" spy={true} smooth={true} offset={0} duration={500}>HOMEPAGE</Link>
+            <Link to="about" spy={true} smooth={true} offset={-200} duration={500}>ABOUT </Link>
+            <Link to="skills" spy={true} smooth={true} offset={-200} duration={500}>SKILLS</Link>
+            <Link to="projects" spy={true} smooth={true} offset={-50} duration={500}>PROJECTS</Link>
+            <Link to="contact" spy={true} smooth={true} offset={50} duration={500}>CONTACT</Link>
           </div>
           
         </div>
       </nav>
     </div>
-      <Anasayfa/>
-      <Hakkimda/>
-      <Yetenekler/>
-      <Projeler/>
-      <Iletisim/>
+      <Homepage/>
+      <MyAbout/>
+      <Skills/>
+      <Projects/>
+      <Contact/>
     </>
   );
 }

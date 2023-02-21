@@ -4,9 +4,9 @@ import { AiOutlineMail, AiFillGithub, AiOutlineInstagram, AiFillLinkedin } from 
 import {MdLocationOn} from 'react-icons/md'
 import emailjs from '@emailjs/browser';
 
-const Iletisim = () => {
+const Contact  = () => {
   const form = useRef();
-
+  
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -19,8 +19,8 @@ const Iletisim = () => {
       });
   };
   return (
-    <div className="contact-container" id="iletisim">
-      <h1 >İLETİŞİM</h1>
+    <div className="contact-container" id="contact">
+      <h1 >CONTACT </h1>
      
       <div className="contact-div">
         <div className="contact-info">
@@ -37,18 +37,15 @@ const Iletisim = () => {
       </div>
         
         <form ref={form} onSubmit={sendEmail}>
-        <h3>CV' mi görüntülemek isterseniz mesaj atmanız yeterli </h3>
-        <label>Adınız</label>
-        <input required autoComplete="off" type="text" name="user_name" />
-        <label>Email Adresiniz</label>
-        <input required autoComplete="off" type="email" name="user_email" />
-        <label>Mesajınız</label>
-        <textarea required autoComplete="off" name="message" />
-        <input type="submit" value="Gönder" />
+        <h3>If you want to see my resume, just send a message. </h3>
+        <input required autoComplete="off" type="text" name="user_name" placeholder="Enter your name" />
+        <input required autoComplete="off" type="email" name="user_email" placeholder="Enter your email"/>
+        <textarea required autoComplete="off" name="message" placeholder="Enter your message" />
+        <input type="submit" value="Send" />
         </form>
       
     </div>
   );
 };
 
-export default Iletisim;
+export default Contact ;

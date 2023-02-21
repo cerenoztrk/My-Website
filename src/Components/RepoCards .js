@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProjeKart = ({repo}) => {
+const RepoCards  = ({repo}) => {
   return (
     <div className='repo-info'>
         <div className='description'>
@@ -10,10 +10,10 @@ const ProjeKart = ({repo}) => {
         
         </div>
         <div className='view-btn'>
-            <a target='_blank' rel='noreferrer' href={repo.html_url}>Repoyu görüntüle</a>
+            <a target='_blank' rel='noreferrer' href={repo.html_url}>View repo</a>
         </div>
     </div>
   )
 }
 
-export default ProjeKart;
+export default RepoCards ;
