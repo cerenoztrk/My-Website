@@ -1,27 +1,23 @@
-import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import RepoCards  from "./RepoCards ";
 import Loading from "./Loading";
-//require ('dotenv').config();
 
 const Projects = () => {
   const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   async function getRepos() {
     try {
-      const response = await axios.get(
-        "https://api.github.com/users/cerenoztrk/repos",
-        {
-          headers: {
-            Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`,
-          },
-        }
-      );
+      setLoading(true);
+      setError(null);
+      const response = await axios.get("https://api.github.com/users/cerenoztrk/repos");
       setRepos(response.data);
-      setLoading(false);
     } catch (error) {
       console.log(error);
+      setError("Encountered error while trying to get repositories");
+    } finally {
+      setLoading(false);
     }
   }
   useEffect(() => {
@@ -29,6 +25,9 @@ const Projects = () => {
   }, []);
   if (loading) {
     return <Loading />;
+  }
+  if (error) {
+    return <div>{error}</div>;
   }
   return (
     <div className="repos-container" id="projects">
