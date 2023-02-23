@@ -1,5 +1,15 @@
+:root {
+  --header-color: #ffc7c7;
+  --page-color: #f6f6f6;
+  --secondary-color: #ffe2e2;
+  --button-color: #8785a2;
+  --text-color: #091639;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
-*,*::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 html,
@@ -7,6 +17,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "DM Sans", sans-serif;
+  padding-bottom: 100px;
 }
 
 .header-container .header {
@@ -22,7 +33,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgb(245, 163, 163);
+  background-color: var(--header-color);
   z-index: 99999999999;
 }
 .header {
@@ -67,28 +78,9 @@ body {
   transition: ease-in-out 200ms;
   color: #55889b;
 }
-.icons {
-  display: flex;
-  gap: 0 40px;
-}
-.icons a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3px;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #091639;
-  border-radius: 50%;
-  color: #091639;
-}
-.icons a:hover {
-  transition: ease 300ms;
-  background-color: #091639;
-  color: #ebeef3;
-}
+
 .homepage-container {
-  background-color: #ebeef3;
+  background-color: var(--page-color);
   margin-top: -20px;
   width: 100%;
   display: flex;
@@ -121,26 +113,25 @@ body {
 }
 .homepage-content span {
   padding: 8px 15px;
-  background-color: rgb(245, 163, 163);
+  background-color: var(--button-color);
   font-family: "DM Sans", sans-serif;
   border-radius: 15px;
   margin-top: 30px;
   margin-bottom: 200px;
   cursor: pointer;
 }
-.homepage-content span a {
-  text-decoration: none;
-  color: #e0e0e0;
-}
+
 .homepage-content span:hover {
   transition: all 300ms;
-  background-color: #000124;
+  background-color: var(--header-color);
 }
 .about-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  background-color: var(--page-color);
+  width: 100%;
 }
 
 .developer-imag {
@@ -177,6 +168,8 @@ body {
   width: min(100% - 2rem, 1024px);
   padding-inline: 1rem;
   margin-inline: auto;
+  background-color: var(--page-color);
+  width: 100%;
 }
 .ability-container .skillss {
   display: grid;
@@ -187,7 +180,11 @@ body {
   height: 400px;
   left: 0px;
   top: 20px;
-  background:  linear-gradient(180deg, rgb(217, 217, 217) 0.18%, rgba(241, 250, 238, 0.05) 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(217, 217, 217) 0.18%,
+    rgba(241, 250, 238, 0.05) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.03);
   backdrop-filter: blur(15px);
@@ -197,7 +194,11 @@ body {
   height: 400px;
   left: 0px;
   top: 20px;
-  background:  linear-gradient(0deg, rgb(217, 217, 217) 0.18%, rgba(241, 250, 238, 0.05) 100%);
+  background: linear-gradient(
+    0deg,
+    rgb(217, 217, 217) 0.18%,
+    rgba(241, 250, 238, 0.05) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.03);
   backdrop-filter: blur(15px);
@@ -207,7 +208,11 @@ body {
   height: 400px;
   left: 0px;
   top: 20px;
-  background: linear-gradient(180deg, rgb(217, 217, 217) 0.18%, rgba(241, 250, 238, 0.05) 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(217, 217, 217) 0.18%,
+    rgba(241, 250, 238, 0.05) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.03);
   backdrop-filter: blur(15px);
@@ -237,7 +242,8 @@ body {
 }
 
 .repos-container {
-  width: 60%;
+  background-color: var(--page-color);
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -302,7 +308,7 @@ body {
 
 .view-btn {
   margin: 20px auto;
-  background-color: rgb(245, 163, 163);
+  background-color: var(--button-color);
   padding: 6px 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -314,95 +320,160 @@ body {
 }
 .view-btn:hover {
   transition: all 200ms;
-  background-color: #000124;
+  background-color: var(--header-color);
 }
-.contact-container {
-  margin-top: 40px;
-  background-color: #ebeef3;
+
+#contact {
+  width: 100%;
+  height: 100%;
+  background-color: var(--page-color);
+}
+
+.section-header {
+  text-align: left;
   color: #091639;
   font-family: "Times New Roman", Times, serif;
+  margin-bottom: 70px;
+  text-align: center;
+}
+.contact-wrapper {
   display: flex;
+  gap: 50px;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
 }
-.contact-div {
+
+.form-horizontal {
   display: flex;
   flex-direction: column;
-  font-family: "DM Sans", sans-serif;
-}
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.location {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0 5px;
-}
-.mail {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0 5px;
-  margin-top: 0px;
-}
-.social {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: -2px;
-  margin-bottom: 20px;
-}
-.social a {
-  margin-bottom: 5px;
-  display: flex;
-  align-items: center;
-  gap: 0 5px;
-  text-decoration: none;
-  color: #000;
-}
-.social-icons {
-  padding: 3px;
-  border: 1px solid #000;
-  border-radius: 50%;
-}
-.social a:hover {
-  transition: all 200ms;
-  color: #1661d3;
-}
-.contact-container form {
-  background-color: #ebeef3;
-  color: #091639;
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
   font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  background-color: var(--page-color);
+}
+
+.form-control,
+textarea {
+  width: 100%;
+  max-width: 300px;
+  background-color: var(--page-color);
+  color: #091639;
+  letter-spacing: 1px;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 5px;
+  resize: none;
+}
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 300px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--page-color);
+}
+.send-button :hover{
+  color: #fff;
+  background-color: #000;
+}
+.direct-contact-container {
+  max-width: 400px;
+}
+
+
+.contact-list {
+  list-style-type: none;
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.list-item {
+  color: var(--text-color);
+}
+.list-item > * {
+  display: flex;
   align-items: center;
+  gap: 1rem;
+}
+.contact-text {
+  font: 300 18px "Times New Roman", Times, serif;
+  letter-spacing: 1.9px;
+  color: var(--text-color);
   
 }
-input[type="text"] {
-  border: 1px solid rgb(245, 163, 163);
-  border-radius: 4px;
-  padding: .2rem;
+.contact-text a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition-duration: 0.2s;
 }
-input[type="email"] {
-  border: 1px solid rgb(245, 163, 163);
-  border-radius: 4px;
-  padding: .2rem;
-  margin: 1rem;
+.contact-text a:hover {
+  color: #000;
+  text-decoration: none;
 }
-textarea[name="message"] {
-  border: 1px solid rgb(245, 163, 163);
-  border-radius: 4px;
-  padding: .2rem;
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-block: 1rem;
 }
-input[type="submit"] {
-  width: 100px;
-  margin: 10px auto;
-  background-color: rgb(245, 163, 163);
-  padding: 5px 10px;
-  border-radius: 5px;
+.social-media-list li a {
+  color: #fff;
+  line-height: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.social-media-list li:hover {
+  top: -1px;
+}
+.social-media-list li {
+  list-style-type: none;
+  position: relative;
+  height: 45px;
+  width: 45px;
+  border-radius: 999999px;
+  color: #fff;
+  background-color: var(--text-color);
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.social-media-list li:hover {
+  background-color: #000;
+}
+.social-media-list li:hover:after {
+  opacity: 1;
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+.social-media-list li:hover a {
+  color: #fff;
+}
+
+.copyright {
+  font: 200 14px "Oswald", sans-serif;
+  color: var(--text-color);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.6);
 }
