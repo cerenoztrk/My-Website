@@ -43,9 +43,9 @@ body {
 }
 
 .logo {
-  width: 118px;
-  height: 118px;
-  margin-top: 10px;
+  width: 90px;
+  height: 90px;
+  margin-top: 30px;
 }
 
 @media only screen and (max-width: 530px) {
@@ -172,11 +172,15 @@ body {
   width: 100%;
 }
 .ability-container .skillss {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
+
 }
 .frontend {
+  width: 350px;
   height: 400px;
   left: 0px;
   top: 20px;
@@ -191,6 +195,7 @@ body {
   border-radius: 25px;
 }
 .backend {
+  width: 350px;
   height: 400px;
   left: 0px;
   top: 20px;
@@ -205,6 +210,7 @@ body {
   border-radius: 25px;
 }
 .outros {
+  width: 350px;
   height: 400px;
   left: 0px;
   top: 20px;
@@ -224,6 +230,23 @@ body {
   font-family: "Times New Roman", Times, serif;
   margin-bottom: 20px;
 }
+.ability-container h2 {
+  text-align: center;
+  color: #091639;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 20px;
+}
+.list-items {
+  color:var(--text-color);
+}
+.list-items > * {
+  margin-left: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
 .ability-container ul {
   width: 100%;
   height: auto;
@@ -257,6 +280,7 @@ body {
   margin-bottom: 70px;
 }
 .repos {
+  width: 800px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -329,6 +353,7 @@ body {
   background-color: var(--page-color);
 }
 
+
 .section-header {
   text-align: left;
   color: #091639;
@@ -337,14 +362,18 @@ body {
   text-align: center;
 }
 .contact-wrapper {
+  
   display: flex;
   gap: 50px;
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 20px;
+  padding: 50px;
   position: relative;
   max-width: 840px;
+ 
+  border-radius: 30px;
+  background-color:rgb(217, 217, 217) ;
 }
 
 .form-horizontal {
@@ -355,14 +384,14 @@ body {
   max-width: 300px;
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
-  background-color: var(--page-color);
+  background-color: rgb(217, 217, 217);
 }
 
 .form-control,
 textarea {
   width: 100%;
   max-width: 300px;
-  background-color: var(--page-color);
+  background-color:rgb(217, 217, 217);
   color: #091639;
   letter-spacing: 1px;
   border: 1px solid #ccc;
@@ -376,7 +405,7 @@ textarea {
   width: 300px;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
-  background-color: var(--page-color);
+  background-color: rgb(217, 217, 217);
 }
 .send-button :hover{
   color: #fff;

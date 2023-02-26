@@ -1,6 +1,6 @@
 
 import { Link } from "react-scroll";
-import Logo from "./img/5.png";
+import Logo from "./img/6.png";
 import './App.css';
 
 

@@ -12,7 +12,7 @@ const Skills = () => {
       <div className="skillss">
         <div className="frontend">
           <ul>
-            <h1>FRONT-END</h1>
+            <h2>FRONT-END</h2>
             <li className="list-items">
               <span className="skills-icon">
               <AiFillHtml5 className="app-icons" />
@@ -41,7 +41,7 @@ const Skills = () => {
         </div>
         <div className="backend">
           <ul>
-            <h1>BACKEND</h1>
+            <h2>BACKEND</h2>
             <li className="list-items">
               <span className="skills-icon">
               <DiJava className="app-icons" />
@@ -64,7 +64,7 @@ const Skills = () => {
         </div>
         <div className="outros">
           <ul>
-            <h1>OUTROS</h1>
+            <h2>OUTROS</h2>
             <li className="list-items">
               <span className="skills-icon">
               <AiFillGithub className="app-icons" />
