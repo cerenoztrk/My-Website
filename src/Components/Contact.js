@@ -94,16 +94,16 @@ const Contact = () => {
                   Istanbul, Turkey
                 </span>
               </li>
-              <li className="list-item">
+              {/* <li className="list-item">
                 <a
                   className="contact-text phone"
                   href="tel:1-212-555-5555"
                   title="Give me a call"
                 >
                   <BsTelephone className="contact-icons" />
-                  (538) 822-7934
+                  (000) 000-0000
                 </a>
-              </li>
+              </li> */}
               <li className="list-item">
                 <a
                   className="contact-text gmail"
